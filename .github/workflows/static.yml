@@ -5,6 +5,11 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    # ignores non code files
+    paths-ignore:
+      - '.gitignore'
+      - '.github/workflows/**'
+      - 'README.md' # Optional: skip for documentation updates too
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
