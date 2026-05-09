@@ -6,11 +6,9 @@ on:
   push:
     branches: ["main"]
     # trigger only if these files change
-    paths:
-      - '**.html'
-      - '**.css'
-      - '**.js'
-      - 'public/**'  # If you have a specific assets folder
+    paths-ignore:
+      - '.github/workflows/**'
+      - '.gitignore'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
