@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    # ignores non code files
+    # ignores non code files.
     paths-ignore:
       - '.gitignore'
       - '.github/workflows/**'
