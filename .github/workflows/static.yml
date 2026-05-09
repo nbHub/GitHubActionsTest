@@ -5,11 +5,12 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    # ignores non code files.
-    paths-ignore:
-      - '.gitignore'
-      - '.github/workflows/**'
-      - 'README.md' # Optional: skip for documentation updates too
+    # trigger only if these files change
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'public/**'  # If you have a specific assets folder
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
